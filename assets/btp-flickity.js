@@ -1,29 +1,31 @@
 jQuery(function() {
-	var $slider_primary = jQuery('.wcfg-primary-gallery');
-	if ( $slider_primary.length < 1 ) return;
+	var $project_gallery = jQuery('.project-gallery-slider');
+	if ( $project_gallery.length < 1 ) return;
 
-	$slider_primary.flickity({
-		pageDots: false,
-		imagesLoaded: true,
-		draggable: false,
+	$project_gallery.flickity({
+		cellSelector: 'div.project-slide-item',
+		lazyLoad: 2,
+		pageDots: true,
+		draggable: true,
 		selectedAttraction: 0.01,
 		friction: 0.15,
 		arrowShape: {
-			x0: 0,
-			x1: 60, y1: 50,
-			x2: 70, y2: 45,
-			x3: 15
+			x0: 20,
+			x1: 70, y1: 50,
+			x2: 70, y2: 40,
+			x3: 35
 		}
 	});
 
-	// ---
-
-	var $slider_nav = jQuery('.wcfg-nav-gallery');
+	// A navigation slider may be used below
+	var $slider_nav = jQuery('.project-gallery-nav');
 	if ( $slider_nav.length < 1 ) return;
 
 	$slider_nav.flickity({
-		asNavFor: $slider_primary[0],
+		asNavFor: $project_gallery[0],
+		cellSelector: 'div.project-nav-item',
 		contain: true,
+		lazyLoad: 8,
 		pageDots: false,
 		imagesLoaded: true,
 		freeScroll: true,

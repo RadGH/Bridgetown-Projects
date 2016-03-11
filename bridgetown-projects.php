@@ -45,6 +45,7 @@ function btp_initialize_plugin() {
 
 	include( BTP_PATH . '/includes/post-type.php' );
 	include( BTP_PATH . '/includes/enqueue.php' );
+	include( BTP_PATH . '/includes/flickity.php' );
 }
 
 function btp_no_acf_error() {

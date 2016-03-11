@@ -1,37 +1,122 @@
-.wcfg-nav-gallery {
-	margin: 20px 0 0;
+.project-gallery {
+	display: block;
+	position: relative;
 }
 
-.woocommerce div.images div.wcfg-primary-gallery a {
-	display: block;
-	width: 100%;
-	margin: 0 20px;
+.project-gallery-slider {
+	margin: 10px 10px;
+}
+.project-gallery-nav {
+	margin: 0 10px 10px;
 }
 
-.woocommerce div.images div.wcfg-nav-gallery a {
+
+/* Structure of slider images */
+.project-gallery .project-slide-item {
+	min-width: 60%;
+	text-align: center;
+}
+
+.project-gallery .project-slide-item a {
 	display: block;
-	width: 75px;
-	margin: 0 5px;
+}
+
+.project-gallery .project-slide-item img {
+	display: block;
+	margin: 0 auto;
+
+	width: auto;
+	height: auto;
+	max-height: 400px;
+	max-width: 100%;
+	min-width: 0;
+}
+
+/* Slider image dots */
+.project-gallery-slider .flickity-page-dots {
+	bottom: 15px;
+}
+
+.project-gallery-slider .flickity-page-dots .dot {
+	background: #fff;
+}
+
+/* Structure of slider nav */
+.project-gallery-nav .project-nav-item {
+	width: 100px;
 	padding: 3px;
+
+	background: #fff;
+	border-radius: 2px;
 }
 
-.woocommerce div.product div.images .wcfg-primary-gallery a img {
-	max-height: 450px;
+
+.project-gallery-nav .project-nav-item a {
+	display: block;
 }
 
-/* Flexbox for vertically centered images */
-.woocommerce div.images div.wcfg-primary-gallery a {
-	min-height: 100%;
+.project-gallery-nav .project-nav-item img {
+	width: 100%;
+	height: auto;
 
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
-
-	-webkit-align-items: center;
-	-ms-flex-align: center;
-	align-items: center;
+	border-radius: 2px;
+	overflow: hidden;
 }
 
-.woocommerce div.images div.wcfg-nav-gallery a.is-nav-selected {
-	box-shadow: inset 0 0 0 3px #AD5800;
+/* Slider Nav Opacity Fade */
+.project-gallery-nav .project-nav-item {
+	opacity: 0.6;
+	transition: opacity 0.3s;
+}
+
+.project-gallery .project-nav-item.is-selected {
+	opacity: 1;
+}
+
+/* fade in image when loaded */
+.project-gallery a {
+	display: block;
+}
+
+.project-gallery img {
+	display: block;
+	transition: opacity 0.4s;
+	opacity: 0;
+
+	max-width: none;
+}
+
+.project-gallery img.flickity-lazyloaded,
+.project-gallery img.flickity-lazyerror {
+	opacity: 1;
+}
+
+/* Responsive */
+
+
+@media ( max-width: 1080px ) {
+	.project-gallery .project-slide-item {
+		width: 100%;
+	}
+
+	.project-gallery-slider .flickity-page-dots {
+		display: none;
+	}
+
+	.project-gallery-nav .project-nav-item {
+		width: 75px;
+		padding: 2px;
+	}
+
+	.flickity-prev-next-button {
+		display: none;
+	}
+}
+
+@media ( max-width: 720px ) {
+	.project-gallery-nav {
+		display: none;
+	}
+
+
 }
