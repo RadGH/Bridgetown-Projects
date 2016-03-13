@@ -35,9 +35,9 @@ function btp_replace_thumbnail_with_gallery( $html, $post_ID, $post_thumbnail_id
 				ob_start();
 				?>
 				<div class="project-slide-item" id="btp-<?php echo $post_ID; ?>-n<?php echo $i; ?>">
-					<a href="<?php echo esc_attr($full); ?>" class="project-lightbox">
+					<?php /* <a href="<?php echo esc_attr($full); ?>" class="project-lightbox"> */ ?>
 						<img data-flickity-lazyload="<?php echo esc_attr($small); ?>" alt="<?php echo esc_attr($img['alt']); ?>" class="project-slide-image" />
-					</a>
+					<?php /* </a> */ ?>
 
 					<?php if ( $text ) { ?>
 						<div class="project-caption"><?php echo esc_html($text); ?></div>

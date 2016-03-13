@@ -1,4 +1,9 @@
 jQuery(function() {
+	init_single_project_slider();
+	init_featured_projects_slider();
+});
+
+function init_single_project_slider() {
 	var $project_gallery = jQuery('.project-gallery-slider');
 	if ( $project_gallery.length < 1 ) return;
 
@@ -35,4 +40,24 @@ jQuery(function() {
 	$slider_nav.on('click', 'a', function(e) {
 		e.preventDefault();
 	});
-});
+}
+
+function init_featured_projects_slider() {
+	var $featured_gallery = jQuery('.btp-project-slider');
+	if ( $featured_gallery.length < 1 ) return;
+
+	$featured_gallery.flickity({
+		cellSelector: 'div.btp-slide-item',
+		lazyLoad: 2,
+		pageDots: true,
+		draggable: true,
+		selectedAttraction: 0.01,
+		friction: 0.15,
+		arrowShape: {
+			x0: 20,
+			x1: 70, y1: 50,
+			x2: 70, y2: 40,
+			x3: 35
+		}
+	});
+}
