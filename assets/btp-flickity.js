@@ -12,8 +12,8 @@ function init_single_project_slider() {
 		lazyLoad: 2,
 		pageDots: true,
 		draggable: true,
-		selectedAttraction: 0.01,
-		friction: 0.15,
+		selectedAttraction: 0.007,
+		friction: 0.12,
 		arrowShape: {
 			x0: 20,
 			x1: 70, y1: 50,
@@ -51,8 +51,8 @@ function init_featured_projects_slider() {
 		lazyLoad: 2,
 		pageDots: true,
 		draggable: true,
-		selectedAttraction: 0.01,
-		friction: 0.15,
+		selectedAttraction: 0.007,
+		friction: 0.12,
 		autoPlay: 6000,
 		arrowShape: {
 			x0: 20,
