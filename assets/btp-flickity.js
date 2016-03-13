@@ -53,6 +53,7 @@ function init_featured_projects_slider() {
 		draggable: true,
 		selectedAttraction: 0.01,
 		friction: 0.15,
+		autoPlay: 6000,
 		arrowShape: {
 			x0: 20,
 			x1: 70, y1: 50,
